@@ -70,6 +70,24 @@ docker stop --time 15 hello-azure-go
 docker start hello-azure-go
 ```
 
+## Delivery
+
+GitHub Actions validates formatting, tests, vetting, compilation, and Docker builds.
+
+The CD workflow publishes immutable commit-tagged images to Azure Container Registry and updates the selected Azure Container App through GitHub OIDC.
+
+The current deployment environment is:
+
+| Environment | Azure target |
+|-------------|----------------------------------------------|
+| `dev`       | `hello-azure-go-dev` in `tg-hello-azure-dev` |
+
+See the [GitHub deployment guide](.github/README.md) for environment setup, variables, OIDC configuration, RBAC, and deployment behavior.
+
+The current development endpoint is: [https://hello-azure-go-dev.lemonwater-bcb51af9.canadaeast.azurecontainerapps.io/health](https://hello-azure-go-dev.lemonwater-bcb51af9.canadaeast.azurecontainerapps.io/health)
+
+Then replace the existing “Next steps” section with:
+
 ## Next steps
 
-Add GitHub CI, then Azure deployment using GitHub OIDC.
+Implement Terraform plan & apply within the GitHub Action workflows.
