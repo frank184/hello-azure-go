@@ -6,9 +6,16 @@ on:
     types: [completed]
     branches: [main]
   workflow_dispatch:
+    inputs:
+      environment:
+        description: Deployment environment
+        type: environment
+        required: false
+        default: dev
 
 jobs:
   deploy:
+    environment: ${{ inputs.environment || 'dev' }}
     if: >
       (github.event_name == 'workflow_dispatch') || 
       (
