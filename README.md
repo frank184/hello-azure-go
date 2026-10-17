@@ -82,9 +82,11 @@ The current deployment environment is:
 |-------------|----------------------------------------------|
 | `dev`       | `hello-azure-go-dev` in `tg-hello-azure-dev` |
 
-See the [GitHub deployment guide](.github/README.md) for environment setup, variables, OIDC configuration, RBAC, and deployment behavior.
+See the [GitHub deployment guide](.github/_README.md) for environment setup, variables, OIDC configuration, RBAC, and deployment behavior.
 
-The current development endpoint is: [https://hello-azure-go-dev.lemonwater-bcb51af9.canadaeast.azurecontainerapps.io/health](https://hello-azure-go-dev.lemonwater-bcb51af9.canadaeast.azurecontainerapps.io/health)
+The current development endpoint is: 
+
+[https://hello-azure-go-dev.lemonwater-bcb51af9.canadaeast.azurecontainerapps.io/health](https://hello-azure-go-dev.lemonwater-bcb51af9.canadaeast.azurecontainerapps.io/health)
 
 Then replace the existing “Next steps” section with:
 
